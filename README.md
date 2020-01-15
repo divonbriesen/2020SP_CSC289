@@ -5,7 +5,9 @@ Invited the following collaborators:
 - Joel Moore - b4ir2old :
 - Alex Schmid - LTSchmiddy :
 - Robert Propheter - robert-m-proph : 
+
+
 Waiting for github ids from the following (will have once they complete their introduction within blackboard)
-- Austin Malmberg
+- Austin Malmberg - austinmalmberg:
 - Hector Mundo
 - William Prudencio
