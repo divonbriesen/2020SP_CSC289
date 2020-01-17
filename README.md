@@ -8,5 +8,5 @@ Invited the following collaborators:
 ### Waiting for github ids from the following 
 (will have once they complete their introduction within blackboard)
 - Austin Malmberg
-- Hector Mundo
+- Hector Mundo - nmundo
 - William Prudencio
