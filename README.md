@@ -9,6 +9,5 @@ Invited the following collaborators:
 - Robert Propheter - robert-m-proph : Here on 1/17/2020 at 10:50am
 - Hector/Nathan Mundo - nmundo :
 - Austin Malmberg - austinmalmberg : Checked in on 01/17/2020 @ 3pm
-### Waiting for github ids from the following
-(will have once they complete their introduction within blackboard)
-- William Prudencio
+- William Prudencio - wprudencio97 : 
+
