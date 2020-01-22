@@ -9,4 +9,4 @@ Please note your time and date once you have edit rights
 - Joel Moore - b4ir2old : checked in on 1/21/2020 @ 12:07
 - Alex Schmid - LTSchmiddy :
 - Hector/Nathan Mundo - nmundo :
-- William Prudencio - wprudencio97 : 
+- William Prudencio - wprudencio97 : wprudencio97/CSC289-William-Prudencio
