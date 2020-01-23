@@ -6,7 +6,8 @@ Please note your time and date once you have edit rights
 - Robert Propheter - robert-m-proph : Here on 1/17/2020 at 10:50am
 - Austin Malmberg - austinmalmberg : Checked in on 01/17/2020 @ 3pm
 - Joel Moore - b4ir2old : checked in on 1/21/2020 @ 12:07
+- William Prudencio - wprudencio97 : Was here 01/23/20 @ 5:30PM
 ## Invited and waiting on the following collaborators:
 - Alex Schmid - LTSchmiddy :
 - Hector/Nathan Mundo - nmundo :
-- William Prudencio - wprudencio97 : wprudencio97/CSC289-William-Prudencio
+
