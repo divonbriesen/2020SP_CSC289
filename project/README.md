@@ -12,8 +12,8 @@ An application that allows users to track their stock portfolio
 
 Change to the **project** directory then type the following commands:
 
-    > FLASK_APP=portfolio
-    > FLASK_ENV=development
+    > set FLASK_APP=portfolio
+    > set FLASK_ENV=development
     > flask init-db
     > flask run
     
