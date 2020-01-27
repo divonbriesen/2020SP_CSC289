@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+
+{% macro display_stock(symbol) %}
+    <div class="stock--details{{ ' owned' if symbol in portfolio else '' }}">
+
+        <div class="info">
+            <h3>{{ symbol }}</h3>
+        </div>
+
+        <div class="actions">
+            <button>Buy</button>
+            <button>Sell</button>
+        </div>
+
+        <!-- the down class will be added through a script-->
+        <h3 class="ticker down">
+
+            <span class="price current">3.7200</span>
+            <span class="price--diff diff indicator">-0.12</span>
+            <span class="price--diff--pct diff">(-0.33%)</span>
+
+        </h3>
+
+        <div class="daily">
+            <h4>Today</h4>
+            <p><span class="today hi bolded">3.76</span> Hi</p>
+            <p><span class="today lo bolded">3.69</span> Lo</p>
+            <p><span class="bolded">1234567</span> Vol</p>
+        </div>
+
+        <div class="annual">
+            <h4>52 Wk Range</h4>
+            <p><span class="year hi bolded">5.94</span> Hi</p>
+            <p><span class="year lo bolded">3.11</span> Lo</p>
+        </div>
+
+        <!-- the up class will be added through a script-->
+        {% if symbol in portfolio %}
+            <table class="portfolio up">
+                <tr>
+                    <th>Shares</th>
+                    <td class="shares">100</td>
+                </tr>
+                <tr>
+                    <th>Bought For</th>
+                    <td class="purchase--price">3.56</td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th>Purchase Value</th>
+                    <td class="purchase--value">356.00</td>
+                </tr>
+                <tr>
+                    <th>Current Value</th>
+                    <td class="current--value diff indicator">372.00</td>
+                </tr>
+                <tr>
+                    <th>Change</th>
+                    <td class="diff--value diff indicator">16.00</td>
+                </tr>
+            </table>
+        {% endif %}
+
+        <div class="chart">Chart will go here</div>
+
+    </div>
+{% endmacro %}
+
+
+{% block content %}
+
+    <h1>{% block title %}Welcome{% endblock %}</h1>
+
+    {% if portfolio %}
+        <div id="summary">
+            <h2>Summary</h2>
+        </div>
+
+        <div id="my--stocks">
+            <h2>Portfolio</h2>
+            {% for symbol in portfolio %}
+                {{ display_stock(symbol) }}
+                {% if not loop.last %}
+                  <hr>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <div id="featured">
+        <h2>Featured</h2>
+        {% for symbol in featured %}
+            {{ display_stock(symbol) }}
+            {% if not loop.last %}
+              <hr>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='scripts/getStockInfo.js') }}"></script> -->
+
+{% endblock %}

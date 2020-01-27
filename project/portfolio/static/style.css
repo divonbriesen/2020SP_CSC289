@@ -1,0 +1,241 @@
+:root {
+    --flash-color: #377ba8;
+    --primary-color: #5ce9ff;
+
+    --down-color: #e8203e;
+    --up-color: #20ca48;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #ccc;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+footer {
+    padding: 2em 0;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    min-height: 100vh;
+    padding: 0 2em;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 0;
+}
+
+nav h1 {
+    flex: auto;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+/* FORMS */
+
+fieldset {
+    border: none;
+    padding: 0.5em 0;
+}
+
+fieldset > * {
+    display: block;
+    padding: 0.25em 0;
+}
+
+
+/* BUTTONS */
+
+input[type=submit], button {
+    font-size: 1.4em;
+    font-weight: bold;
+
+    padding: 0.5em 2em;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: black;
+    color: white;
+
+    transition-duration: 200ms;
+}
+
+input[type=submit]:hover, button:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+
+/* ERRORS */
+
+.flash {
+    margin: 1em 0;
+    padding: 1em;
+    background: #cae6f6;
+    border: 1px solid var(--flash-color);
+}
+
+
+/* STOCK DATA */
+
+.stock--details {
+    display: grid;
+    grid-template-areas:
+    "info    ticker ticker chart"
+    "actions daily  annual chart"
+    "actions daily  annual chart";
+    justify-items: center;
+    align-items: center;
+    grid-gap: 0.2em;
+    margin: 1em 0;
+}
+
+.stock--details.owned {
+    grid-template-areas:
+    "info    ticker ticker portfolio chart"
+    "actions daily  annual portfolio chart"
+    "actions daily  annual portfolio chart";
+}
+
+.stock--details h3 {
+    font-size: 1.6em;
+}
+
+.actions button {
+    display: block;
+}
+
+.stock--details .actions > * {
+    margin: 1em 0;
+}
+
+.info {
+    grid-area: info;
+}
+
+.actions {
+    grid-area: actions;
+}
+
+.ticker {
+    grid-area: ticker;
+
+    position: relative; /* for adding triangles */
+    margin: 0;
+
+    display: inline-block;
+    font-weight: bold;
+}
+
+.daily {
+    grid-area: daily;
+}
+
+.annual {
+    grid-area: annual;
+}
+
+table.portfolio {
+    grid-area: portfolio;
+
+    height: 100%;
+    width: 100%;
+}
+
+table.portfolio th {
+    text-align: left;
+    font-weight: normal;
+}
+
+table.portfolio td {
+    text-align: right;
+}
+
+.chart {
+    grid-area: chart;
+
+    height: 240px;
+    width: 420px;
+    border: 1px solid black;
+}
+
+.daily, .annual {
+    align-self: start;
+}
+
+
+/* STOCK ACCENTS */
+
+.bolded, table.portfolio td {
+    font-weight: bold;
+}
+
+.up .diff, .up.diff {
+    color: var(--up-color);
+}
+
+.down .diff, .down.diff {
+    color: var(--down-color);
+}
+
+.indicator {
+    /* make room for triangle */
+    margin-left: 1em;
+}
+
+/* triangles */
+
+.indicator::before {
+    content: '';
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+}
+
+.up .indicator::before, .up.indicator::before {
+    margin-left: -1.1em;
+    margin-top: 0.15em;
+
+    border-bottom: 0.8em solid var(--up-color);
+}
+
+.down .indicator::before, .down.indicator::before {
+    margin-left: -1em;
+    margin-top: 0.2em;
+
+    border-top: 0.8em solid var(--down-color);
+}

@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS accounts;
+DROP TABLE IF EXISTS transactions;
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE accounts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    owner INTEGER NOT NULL,
+    balance INTEGER NOT NULL,
+    FOREIGN KEY (owner) REFERENCES user (id)
+);
+
+CREATE TABLE transactions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    stock TEXT NOT NULL,
+    shares INTEGER NOT NULL,
+    transType CHAR(1) NOT NULL,
+    price INTEGER NOT NULL,
+    datetime INTEGER NOT NULL
+);

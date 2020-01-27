@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %} | Stock Portfolio </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+<div class="container">
+
+    <header>
+
+        {% include 'navigation.html' %}
+
+    </header>
+
+    <main>
+
+        {% block content %}{% endblock %}
+
+    </main>
+
+    <footer>
+
+        {% include 'footer.html' %}
+
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</div>
+
