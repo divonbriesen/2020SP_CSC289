@@ -7,7 +7,7 @@ Please note your time and date once you have edit rights
 - Austin Malmberg - austinmalmberg : Checked in on 01/17/2020 @ 3pm
 - Joel Moore - b4ir2old : checked in on 1/21/2020 @ 12:07
 - William Prudencio - wprudencio97 : Was here 01/23/20 @ 5:30PM
-- Alex Schmid - LTSchmiddy : The Lieutenant has landed on 1/29/2020 @ 8:25pm
+- Alex Schmid - LTSchmiddy : The Lieutenant has landed as of 1/29/2020 @ 8:25pm
 ## Invited and waiting on the following collaborators:
 - Hector/Nathan Mundo - nmundo :
 
